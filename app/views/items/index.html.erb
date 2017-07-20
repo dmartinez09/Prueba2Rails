@@ -12,12 +12,12 @@
 		<td>Serial</td>
 		<td>Categoria</td>
 	</tr>
-	<% @item.each do |i| %>
+	<% @item.each do |x| %>
 		<tr>
 		<li>
-		<td><%= i.user.name%></td>
-			<td><%= i.serial %></td>
-			<td><%= i.category.name %></td>
+		<td><%= x.user.name%></td>
+			<td><%= x.serial %></td>
+			<td><%= x.category.name %></td>
 			</li>
 			
 		</tr>
