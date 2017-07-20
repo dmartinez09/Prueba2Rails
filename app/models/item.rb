@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
-	belong_to :category
-	belong_to :user, optional: true
+	belongs_to :category
+	belongs_to :user, optional: true
 
 	scope :return_size, -> (size) { where("size=?", size)}
 	scope :user_unassigned, -> { where(user_id: nil) }
@@ -11,7 +11,8 @@ class Item < ApplicationRecord
 		Category.all.each do |x|
 			unless category.items.any?
 				category.destroy
-		
+
+			end
+		end
 	end
-end
 end
